@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class ElementCollectionTest {
+public class  ElementCollectionTest {
     private ElementCollection elements;
 
     @Before
