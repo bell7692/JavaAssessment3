@@ -4,6 +4,9 @@ import user_management.User;
 
 public class Authenticator {
     public static boolean authenticate(User user, String passwordToCheck) {
+        if(user.getPassword().equals(passwordToCheck)){
+            return true;
+        }
         return false;
     }
 }

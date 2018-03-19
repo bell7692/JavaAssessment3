@@ -75,7 +75,7 @@ public class  ElementCollectionTest {
     }
 
     @Test
-    public void where() {
+    public void where() throws NoSuchFieldException, IllegalAccessException {
         ElementCollection expected = new ElementCollection() {{add(new Element(
                 "Hydrogen",
                 "colorless gas",

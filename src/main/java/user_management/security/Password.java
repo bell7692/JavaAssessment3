@@ -1,18 +1,29 @@
 package user_management.security;
 
+import org.mindrot.jbcrypt.BCrypt;
+
+import java.security.MessageDigest;
+import java.security.SecureRandom;
+
 public class Password {
     private final static int workload = 12;
+    private static String hash;
+
 
     public Password(String password) {
-        //this.hash = hashPassword(password);
+        this.hash = hashPassword(password);
+
     }
 
-    public static String hashPassword(String password_plaintext) {
-        // salt = generateSalt(workload)
-        // hash = hasher.hash(password, salt)
-        // return hash
 
-        return null;
+// This automatically handles secure 128-bit salt generation and storage within the hash.
+
+    public static String hashPassword(String password_plaintext) {
+        String salt = BCrypt.gensalt(workload);
+        hash = BCrypt.hashpw(password_plaintext, salt);
+
+        return hash;
+
     }
 
     public boolean matches(String password_plaintext) {
@@ -24,10 +35,11 @@ public class Password {
         // hasher.check(password, hashToCheckAgainst)
         // return true if check is true
         // return false if check is false
-        return false;
+       return BCrypt.checkpw(password_plaintext, hashPassword(password_plaintext));
+
     }
 
     public String getHash() {
-        return null;
+        return hash;
     }
 }
