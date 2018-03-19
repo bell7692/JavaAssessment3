@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="895c91f6-82f6-4c3d-8d13-03ac0ed73a0f" name="Default" comment="" />
+    <list default="true" id="895c91f6-82f6-4c3d-8d13-03ac0ed73a0f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,7 +75,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Password.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Password.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/user_management/security/Password.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="469">
@@ -107,7 +109,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AuthenticatorTest.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="AuthenticatorTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/user_management/security/AuthenticatorTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="120">
@@ -629,7 +631,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521465785924</updated>
-      <workItem from="1521465787871" duration="27374000" />
+      <workItem from="1521465787871" duration="27529000" />
     </task>
     <servers />
   </component>
@@ -666,7 +668,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27374000" />
+    <option name="totallyTimeSpent" value="27529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-309" y="-1057" width="1807" height="1057" extended-state="0" />
@@ -930,18 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/user_management/security/Password.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1335#1336#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -1059,14 +1049,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/user_management/security/AuthenticatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/parsing_json/ElementCollectionInitializerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1089,6 +1071,26 @@
           <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/user_management/security/AuthenticatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/user_management/security/Password.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
           </folding>
         </state>
       </provider>
