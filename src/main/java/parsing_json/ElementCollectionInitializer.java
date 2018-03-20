@@ -24,12 +24,8 @@ public class ElementCollectionInitializer {
 
          ElementCollection elements = gson.fromJson(reader, ElementCollection.class);
 
-        System.out.println(elements.get(0).getName());
-        System.out.println(elements.get(1).getName());
-        System.out.println(elements.get(2).getName());
-        System.out.println(elements.get(3).getName());
-        System.out.println(elements.get(4).getName());
-        System.out.println(elements.get(5).getName());
         return elements;
+
     }
+
 }

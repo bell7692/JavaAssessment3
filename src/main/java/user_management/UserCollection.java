@@ -11,63 +11,52 @@ import java.util.ArrayList;
 
 public class UserCollection extends ArrayList<User> {
 
-    private UserCollectionInitializer userCollectionInitializer;
-
-
-    private ArrayList<User> users;
-
-    public UserCollection() throws FileNotFoundException {
-        users = UserCollectionInitializer.generate();
-    }
-
 
 
     public User findById(int id) {
-
-        for (User user : users){
-            if (user.getId() == id) {
-                return user;
+        for (int i = 0; i < this.size(); i++) {
+            if (this.get(i).getId() == id) {
+                return this.get(i);
             }
         }
         return null;
     }
 
     public User findByEmail(String email) {
-        for (User user : users){
-            if (user.getEmail().equalsIgnoreCase(email)) {
-                return user;
+        for (int i = 0; i < this.size(); i++) {
+            if (this.get(i).getEmail().equalsIgnoreCase(email)) {
+                return this.get(i);
             }
         }
-        return null;    }
+        return null;
+    }
 
     public User attemptLogin(String email, String password) throws UserAuthenticationFailedException{
-            for(User user : users){
-                if(user.getEmail().equalsIgnoreCase(email)){
-                    if(user.getPassword().equals(password)){
-                        return user;
+        for (int i = 0; i < this.size() ; i++) {
+            if(this.get(i).getEmail().toString().equalsIgnoreCase(email) && this.get(i).getPassword().equals(password)){
+                        return this.get(i);
                     }
                 }
-            }
         return null;
     }
 
     public int createUser(String name, String email, String password) throws EmailNotAvailableException, InvalidEmailException, PasswordTooSimpleException{
         String emailRegex = "^[_A-Za-z0-9-\\\\+]+(\\\\.[_A-Za-z0-9-]+)*\n@[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$;";
         String passwordRegex = "^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$";
-        for(User user : users){
-            if(!user.getName().equalsIgnoreCase(name)){
+        for (int i = 0; i < this.size() ; i++) {
+            if(!this.get(i).getName().equalsIgnoreCase(name)){
                 throw new EmailNotAvailableException();
             }
-                if(!user.getEmail().equalsIgnoreCase(email) || !email.matches(emailRegex) ){
-                    throw new InvalidEmailException();
-                }
-                    if(!user.getPassword().equals(password) || !password.matches(passwordRegex)){
-                        throw new PasswordTooSimpleException();
-                    }
-           else{
-                users.add(new User(users.size()+1, name, email, password));
-                }
+            else if(!this.get(i).getEmail().equalsIgnoreCase(email) || !email.matches(emailRegex) ){
+                throw new InvalidEmailException();
+            }
+            else if(!password.matches(passwordRegex)){
+                throw new PasswordTooSimpleException();
+            }
+            else{
+                this.add(new User(this.size()+1, name, email, password));
+            }
         }
-         return users.size();
+         return this.size();
     }
 }

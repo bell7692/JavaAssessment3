@@ -31,10 +31,6 @@ public class Password {
         //       assume that all the passwords we will check are valid. All of the password hashes in the users.json
         //       file are valid so there should be no worry about this as long as you don't overwrite them manually.
 
-        // hashToCheckAgainst = this.hash
-        // hasher.check(password, hashToCheckAgainst)
-        // return true if check is true
-        // return false if check is false
        return BCrypt.checkpw(password_plaintext, hashPassword(password_plaintext));
 
     }
