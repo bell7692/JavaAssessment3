@@ -1,0 +1,9 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <extensionMap>
+      <mapping ext="hashmap" type="CLASS" />
+      <mapping pattern="DELETEME" type="Groovy" />
+      <mapping pattern="BoResults" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>

@@ -1,0 +1,10 @@
+<application>
+  <component name="ParameterNameHintsSettings">
+    <blacklists>
+      <blacklist language="Java">
+        <added pattern="org.junit.Assert.assertThat(actual,matcher)" />
+        <added pattern="java.util.Arrays.copyOf(original,newLength)" />
+      </blacklist>
+    </blacklists>
+  </component>
+</application>
